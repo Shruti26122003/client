@@ -1,0 +1,95 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff3366; /* Bright, attention-grabbing background */
+    padding: 12px 20px; /* Increased padding for a more spacious design */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition on hover */
+  }
+  
+  /* Navbar Links Container */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Increased gap for spacing */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Links Styling */
+  .navbar-links li a {
+    display: flex;
+    align-items: center;
+    color: white; /* White text color */
+    font-size: 1.2rem; /* Slightly larger text */
+    text-decoration: none; /* Remove underline */
+    font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scale */
+  }
+  
+  /* Icon Styling */
+  .navbar-links li a svg {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.6rem; /* Larger icon size */
+    transition: transform 0.3s ease; /* Smooth icon scaling on hover */
+  }
+  
+  /* Hover Effects for Links */
+  .navbar-links li a:hover {
+    color: #ff99cc; /* Soft hover color for text */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+  
+  /* Hover Effects for Icons */
+  .navbar-links li a:hover svg {
+    transform: scale(1.2); /* Enlarge the icon on hover */
+  }
+  
+  /* Active Link Styling */
+  .navbar-links li a.active {
+    color: #ff99cc; /* Active link color */
+    font-weight: bold; /* Bold active link */
+  }
+  
+  /* Navbar Branding */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem; /* Larger font size for the brand */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /* Bold font for the brand */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  /* Responsive Styling for Smaller Screens */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 12px 20px;
+    }
+  
+    .navbar-links {
+      gap: 10px;
+    }
+  
+    .navbar-links li a {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  
+    .navbar-brand {
+      font-size: 1.6rem; /* Adjust brand font size */
+    }
+  }
+  
