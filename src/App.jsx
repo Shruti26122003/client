@@ -1,3 +1,4 @@
+// src/App.js
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./components/Home";
@@ -5,7 +6,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
-
+import Dashboard from "./components/Dashboard";
+import Message from "./components/Message";
+import DoctorAppointment from "./components/DoctorAppointment";
 const App = () => {
   const location = useLocation(); // Get the current path dynamically
 
@@ -28,6 +31,10 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/message" element={<Message />} />
+          <Route path="/doctorappointment" element={<DoctorAppointment />} />
+
         </Routes>
       </div>
       {isHomePage && <Footer />} {/* Show Footer only on the home page */}

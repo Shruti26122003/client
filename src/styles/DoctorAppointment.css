@@ -1,0 +1,94 @@
+/* src/styles/PeriodAppointment.css */
+
+/* General Reset - Scoped to only PeriodAppointment component */
+.appointment-container, 
+.appointment-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.appointment-container {
+  font-family: 'Arial', sans-serif;
+  background: #f9f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make the page fill the screen */
+}
+
+.appointment-container h1 {
+  font-size: 2.5rem;
+  color: #5c3d6e;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.appointment-form {
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-form .form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.appointment-form label {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.appointment-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.appointment-form button.submit-btn {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.appointment-form button.submit-btn:hover {
+  background-color: #c2185b;
+}
+
+@media (max-width: 768px) {
+  .appointment-container {
+    padding: 20px;
+  }
+
+  .appointment-form {
+    padding: 20px;
+  }
+
+  .appointment-form h1 {
+    font-size: 2rem;
+  }
+}

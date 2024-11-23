@@ -14,6 +14,7 @@ const Navbar = () => {
         <li><Link to="/signup"><FaUserPlus /> Sign Up</Link></li>
         <li><Link to="/login"><FaSignInAlt /> Log In</Link></li>
         <li><Link to="/dashboard"><FaHeart /> Dashboard</Link></li>
+        <li><Link to="/message"><FaHeart /> Messages</Link></li>
         <li><Link to="/articles"><FaBook /> Articles</Link></li>
         <li><Link to="/funzone"><FaHeart /> Fun Zone</Link></li>
       </ul>

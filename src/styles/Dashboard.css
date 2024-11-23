@@ -1,0 +1,235 @@
+/* src/styles/Dashboard.css */
+
+/* Add styles for icons */
+.dashboard-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #4CAF50;
+  }
+  
+  .dashboard-form button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dashboard-form button .icon {
+    margin-right: 10px;
+  }
+  
+  .dashboard-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Adjust layout of the form and icons */
+  .dashboard-form .dashboard-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-form input,
+  .dashboard-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .dashboard-section label {
+    font-size: 1.2rem;
+    color: #333;
+    flex: 1;
+  }
+  
+  /* Ensure the form sections look clean */
+  .dashboard-form input:focus,
+  .dashboard-form textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  .dashboard-page {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: url('src/assets/Dashboard.jpg') no-repeat center center fixed;
+    background-size:cover ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    width: 100%;
+    color: #333;
+    position: relative;
+  }
+  
+  /* Transparent overlay to make the text readable */
+  .dashboard-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(210, 177, 177, 0.6); /* Semi-transparent white overlay */
+    z-index: -1;
+  }
+  
+  /* Dashboard Container for content */
+  .dashboard-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(233, 198, 230, 0.9); /* Slightly more opaque background for readability */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Heading Styling */
+  .dashboard-page h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* Dashboard Form */
+  .dashboard-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background for form */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Sections */
+  .dashboard-section {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dashboard-section label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    flex: 1;
+    color: #333;
+  }
+  
+  .dashboard-section input,
+  .dashboard-section textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-left: 10px;
+    flex: 2;
+  }
+  
+  .dashboard-section input:focus,
+  .dashboard-section textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  
+  /* Submit Button */
+  .dashboard-form button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard-form button:hover {
+    background-color: #45a049;
+  }
+
+  /* Message Box */
+.message-box {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: black;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Success Message */
+  .message-box.success {
+    background-color: #4CAF50;
+  }
+  
+  /* Error Message */
+  .message-box.error {
+    background-color: #36f482;
+  }
+  
+  /* Make the message box disappear after 3 seconds */
+  .message-box p {
+    margin: 0;
+  }
+
+
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 20px;
+    }
+  
+    .dashboard-form {
+      padding: 20px;
+    }
+  
+    .dashboard-section input,
+    .dashboard-section textarea {
+      padding: 10px;
+    }
+  
+    .dashboard-form button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+
+    /* For smaller screens */
+    @media (max-width: 768px) {
+    .message-box {
+      max-width: 90%;
+      font-size: 1rem;
+    }
+  }
+  }
+  

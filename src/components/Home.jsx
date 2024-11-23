@@ -1,32 +1,48 @@
-// src/components/Home.js
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import "/src/styles/Home.css";
 
 const Home = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  // Handlers for navigating to different pages
+  const navigateToDashboard = () => navigate('/dashboard');
+  const navigateToDoctorAppointment = () => navigate('/doctorappointment');
+  const navigateToArticlePage = () => navigate('/article');
+
   return (
     <div className="home-container">
-      <h1>Welcome to Period Tracker</h1>
+      <h1>Your Period Tracker</h1>
       <p>
         Empowering women with insights, tools, and tips to track and manage
         menstrual health.
       </p>
 
       <div className="cta-container">
-        <button className="cta-button">Start Tracking Your Cycle</button>
+        {/* Button to navigate to the dashboard */}
+        <button className="cta-button" onClick={navigateToDashboard}>
+          Start Tracking Your Cycle
+        </button>
       </div>
 
       <section className="features">
         <h2>Key Features</h2>
         <div className="features-list">
           <div className="feature">
-            <h3>Cycle Tracking</h3>
+            <h3 onClick={navigateToDashboard} className="clickable-heading">
+              Cycle Tracking
+            </h3>
             <p>Track your menstrual cycle, symptoms, and health insights.</p>
           </div>
           <div className="feature">
-            <h3>Expert Insights</h3>
+            <h3 onClick={navigateToArticlePage} className="clickable-heading">
+              Expert Insights
+            </h3>
             <p>Get expert tips on managing your health and wellness.</p>
           </div>
           <div className="feature">
-            <h3>Doctor Appointments</h3>
+            <h3 onClick={navigateToDoctorAppointment} className="clickable-heading">
+              Doctor Appointments
+            </h3>
             <p>Schedule doctor appointments and manage your health consultations.</p>
           </div>
         </div>
