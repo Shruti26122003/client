@@ -16,7 +16,7 @@ const Navbar = () => {
         <li><Link to="/dashboard"><FaHeart /> Dashboard</Link></li>
         <li><Link to="/message"><FaHeart /> Messages</Link></li>
         <li><Link to="/articles"><FaBook /> Articles</Link></li>
-        <li><Link to="/funzone"><FaHeart /> Fun Zone</Link></li>
+        <li><Link to="/periodPredictor"><FaHeart /> periodPredictor</Link></li>
       </ul>
     </nav>
   );
