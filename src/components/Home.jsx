@@ -7,7 +7,7 @@ const Home = () => {
   // Handlers for navigating to different pages
   const navigateToDashboard = () => navigate('/dashboard');
   const navigateToDoctorAppointment = () => navigate('/doctorappointment');
-  const navigateToArticlePage = () => navigate('/article');
+  const navigateToArticlePage = () => navigate('/articles');
 
   return (
     <div className="home-container">

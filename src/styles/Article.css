@@ -1,0 +1,76 @@
+.article-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url("src/assets/article.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  .article-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+  }
+  
+  .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .article-card {
+    border: 1px solid #ffb6c1; /* Light pink border */
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    background: rgba(255, 228, 235, 0.8); /* Soft pink translucent background */
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(255, 182, 193, 0.3); /* Subtle pink shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(255, 105, 180, 0.4); /* Deeper pink shadow on hover */
+  }
+  
+  .article-card h3 {
+    color: #d63384; /* Deep pink for headings */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .article-card p {
+    font-size: 1rem;
+    color: #6c757d; /* Neutral text for readability */
+  }
+  
+  .article-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: black; /* Hot pink for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .article-link:hover {
+    color: #c2185b; /* Deep rose pink on hover */
+    text-decoration: underline;
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 768px) {
+    .article-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  

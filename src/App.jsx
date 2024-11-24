@@ -10,6 +10,7 @@ import Dashboard from "./components/Dashboard";
 import Message from "./components/Message";
 import DoctorAppointment from "./components/DoctorAppointment";
 import PeriodPredictor from "./components/periodPredictor";
+import Article from "./components/Article";
 const App = () => {
   const location = useLocation(); // Get the current path dynamically
 
@@ -36,7 +37,7 @@ const App = () => {
           <Route path="/message" element={<Message />} />
           <Route path="/doctorappointment" element={<DoctorAppointment />} />
           <Route path="/periodPredictor" element={<PeriodPredictor />} />
-
+          <Route path="/articles" element={<Article />} />
 
         </Routes>
       </div>
