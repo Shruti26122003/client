@@ -1,10 +1,10 @@
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import "/src/styles/Home.css";
 
 const Home = () => {
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate(); 
 
-  // Handlers for navigating to different pages
+  
   const navigateToDashboard = () => navigate('/dashboard');
   const navigateToDoctorAppointment = () => navigate('/doctorappointment');
   const navigateToArticlePage = () => navigate('/articles');
@@ -18,7 +18,6 @@ const Home = () => {
       </p>
 
       <div className="cta-container">
-        {/* Button to navigate to the dashboard */}
         <button className="cta-button" onClick={navigateToDashboard}>
           Start Tracking Your Cycle
         </button>

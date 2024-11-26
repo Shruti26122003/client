@@ -1,4 +1,3 @@
-// src/components/ArticlePage.js
 import "/src/styles/Article.css";
 
 const articles = [

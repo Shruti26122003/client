@@ -12,7 +12,7 @@ const Dashboard = () => {
   const [expertTips, setExpertTips] = useState('');
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
-  const navigate = useNavigate(); // For navigation
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,9 +29,9 @@ const Dashboard = () => {
       setMessage(response.data.message);
       setMessageType(response.data.success ? 'success' : 'error');
 
-      // If submission is successful, redirect to /message
+     
       if (response.data.success) {
-        navigate('/message'); // Direct navigation to the message page
+        navigate('/message'); 
       }
     } catch (error) {
       console.error('Error occurred:', error);
@@ -42,7 +42,6 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-page">
-      {/* Message Box */}
       {message && (
         <div className={`message-box ${messageType}`}>
           <p>{message}</p>

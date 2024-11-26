@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // For navigation
+import { useNavigate } from "react-router-dom"; 
 import axios from "axios";
 import "/src/styles/Login.css";
 
@@ -10,16 +10,16 @@ const Login = () => {
   const navigate = useNavigate();
   const handleLogin = async (e) => {
     e.preventDefault();
-    setErrorMessage(""); // Clear previous error messages
+    setErrorMessage(""); 
     try {
       const res = await axios.post("http://localhost:5000/api/login", {
         email,
         password,
       });
       alert("Welcome, " + res.data.user.username);
-      navigate("/"); // Replace '/home' with the actual route for your home page
+      navigate("/"); 
     } catch (error) {
-      console.error("Login error:", error.response || error.message); // Debugging
+      console.error("Login error:", error.response || error.message); 
       setErrorMessage(error.response?.data?.error || "Something went wrong!");
     }
   };

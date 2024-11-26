@@ -4,11 +4,11 @@ import "/src/styles/periodPerdictor.css";
 
 const PeriodPredictor = () => {
   const [lastPeriodDate, setLastPeriodDate] = useState('');
-  const [cycleLength, setCycleLength] = useState(28); // Default 28 days cycle
+  const [cycleLength, setCycleLength] = useState(28); 
   const [nextPeriodDate, setNextPeriodDate] = useState('');
 
   const handleSavePeriod = async () => {
-    const userId = 'user123'; // Example user ID
+    const userId = 'user123'; 
     try {
       const response = await axios.post('http://localhost:5000/api/save-period', {
         userId,
@@ -22,7 +22,7 @@ const PeriodPredictor = () => {
   };
 
   const handlePredictNextPeriod = async () => {
-    const userId = 'user123'; // Example user ID
+    const userId = 'user123'; 
     try {
       const response = await axios.post('http://localhost:5000/api/predict-next-period', {
         userId,

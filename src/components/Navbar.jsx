@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaHome, FaSignInAlt, FaUserPlus, FaBook, FaHeart } from "react-icons/fa"; // Font Awesome Icons
+import { FaHome, FaSignInAlt, FaUserPlus, FaBook, FaHeart } from "react-icons/fa"; 
 import "/src/styles/Navbar.css";
 
 const Navbar = () => {

@@ -36,8 +36,8 @@ const PeriodAppointment = () => {
     console.log("Submitting form data:", formData);
   
     try {
-      const url = "http://localhost:5000/api/appointments";  // Add console log
-      console.log("Sending POST request to:", url);         // Log the URL
+      const url = "http://localhost:5000/api/appointments";  
+      console.log("Sending POST request to:", url);         
       const response = await axios.post(url, formData);
       
       // Response handling

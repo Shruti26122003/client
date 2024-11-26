@@ -12,7 +12,7 @@ const Signup = () => {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    console.log({ username, email, password }); // Debugging
+    console.log({ username, email, password }); 
     axios
       .post("http://localhost:5000/api/register", {
         username,
@@ -20,22 +20,20 @@ const Signup = () => {
         password,
       })
       .then((result) => {
-        console.log(result.data); // Debugging
+        console.log(result.data); 
         if (result.data.message === "User registered successfully") {
           navigate("/Login");
         }
       })
       .catch((err) => {
-        console.error(err.response?.data || err.message); // Debugging
+        console.error(err.response?.data || err.message); 
       });
   };
 
   return (
     <>
-      {/* Add title directly */}
       <h1 className="signup-title"> Hello, Good Morning!</h1>
 
-      {/* Signup form */}
       <form onSubmit={handleSignup} className="signup-form">
         <h2>Sign Up</h2>
         <input

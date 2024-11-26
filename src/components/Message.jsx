@@ -1,11 +1,10 @@
-// src/components/Message.js
 
 import "/src/styles/Message.css";
 
 const Message = () => {
   const quotes = [
     {
-      image: "src/assets/quote-1.jpg", // Replace with your actual image URLs
+      image: "src/assets/quote-1.jpg", 
       text: "Empowered women empower the world. Keep shining and believing in yourself.",
     },
     {
