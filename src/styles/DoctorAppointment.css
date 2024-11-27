@@ -9,7 +9,7 @@
 .appointment-container {
   font-family: 'Arial', sans-serif;
   padding: 20px;
-  background-color: #f7e8ff;
+  background-color: var(--color-secondary); /* Soft pink */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,14 +19,14 @@
 
 .appointment-container h1 {
   font-size: 2rem;
-  color: #5c3d6e;
+  color: var(--color-accent); /* Deep rose pink */
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .status-message {
   font-size: 1rem;
-  color: green;
+  color: var(--color-success); /* Green for success message */
 }
 
 .appointment-content {
@@ -50,7 +50,7 @@
 
 .appointment-form {
   flex: 1;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -65,14 +65,14 @@
 .appointment-form textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border); /* Subtle pink border */
   border-radius: 5px;
 }
 
 .appointment-form button.submit-btn {
   width: 100%;
   padding: 10px;
-  background-color: #e91e63;
+  background-color: var(--color-primary); /* Vibrant pink */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -80,7 +80,7 @@
 }
 
 .appointment-form button.submit-btn:hover {
-  background-color: #c2185b;
+  background-color: var(--color-accent); /* Darker pink on hover */
 }
 
 @media (max-width: 768px) {

@@ -1,95 +1,142 @@
 /* Navbar Container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ff3366; /* Bright, attention-grabbing background */
-    padding: 12px 20px; /* Increased padding for a more spacious design */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    border-radius: 10px 10px 0 0; /* Rounded top corners */
-    transition: background-color 0.3s ease-in-out; /* Smooth background transition on hover */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-primary)); /* Gradient based on root theme */
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Clean shadow for depth */
+  transition: background 0.3s ease-in-out;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 1.8rem;
+  color: var(--color-text-light); /* Light text color from root theme */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1); /* Slight enlargement for emphasis */
+  color: var(--color-hover); /* Subtle hover color from root theme */
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: white; /* Light text color from root theme */
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  padding: 5px 10px;
+}
+
+/* Hover Effects for Links */
+.navbar-links li a:hover {
+  color: var(--color-hover); /* Hover color from root theme */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-text-light); /* Hover underline color from root theme */
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%; /* Underline effect on hover */
+}
+
+/* Active Link Styling */
+.navbar-links li a.active {
+  color: var(--color-hover); /* Active link color from root theme */
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-text-light); /* Active link underline */
+}
+
+/* Icons in Links */
+.navbar-links li a svg {
+  margin-right: 8px;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar-links li a:hover svg {
+  transform: scale(1.2); /* Icon enlarges on hover */
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 15px 20px;
   }
-  
-  /* Navbar Links Container */
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Increased gap for spacing */
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Links Styling */
-  .navbar-links li a {
-    display: flex;
-    align-items: center;
-    color: white; /* White text color */
-    font-size: 1.2rem; /* Slightly larger text */
-    text-decoration: none; /* Remove underline */
-    font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
-    font-weight: 500; /* Slightly bolder text */
-    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition for color and scale */
-  }
-  
-  /* Icon Styling */
-  .navbar-links li a svg {
-    margin-right: 8px; /* Space between icon and text */
-    font-size: 1.6rem; /* Larger icon size */
-    transition: transform 0.3s ease; /* Smooth icon scaling on hover */
-  }
-  
-  /* Hover Effects for Links */
-  .navbar-links li a:hover {
-    color: #ff99cc; /* Soft hover color for text */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-  }
-  
-  /* Hover Effects for Icons */
-  .navbar-links li a:hover svg {
-    transform: scale(1.2); /* Enlarge the icon on hover */
-  }
-  
-  /* Active Link Styling */
-  .navbar-links li a.active {
-    color: #ff99cc; /* Active link color */
-    font-weight: bold; /* Bold active link */
-  }
-  
-  /* Navbar Branding */
+
   .navbar-brand {
-    display: flex;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 15px;
     align-items: center;
-    font-size: 1.8rem; /* Larger font size for the brand */
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600; /* Bold font for the brand */
-    text-decoration: none;
-    transition: transform 0.3s ease;
   }
-  
-  .navbar-brand:hover {
-    transform: scale(1.05); /* Slight scale effect on hover */
+
+  .navbar-links li a {
+    font-size: 1rem;
   }
-  
-  /* Responsive Styling for Smaller Screens */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 12px 20px;
-    }
-  
-    .navbar-links {
-      gap: 10px;
-    }
-  
-    .navbar-links li a {
-      font-size: 1rem; /* Adjust font size for smaller screens */
-    }
-  
-    .navbar-brand {
-      font-size: 1.6rem; /* Adjust brand font size */
-    }
+}
+
+/* Mobile Menu (Hamburger Button - Optional) */
+.hamburger-menu {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--color-text-light); /* Light color for the hamburger icon */
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
   }
-  
+
+  .navbar-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.8); /* Transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    z-index: 1000;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Shown when active */
+  }
+}

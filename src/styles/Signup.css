@@ -1,7 +1,20 @@
-/* This will apply to body only on signup and login pages */
+/* Global root design */
+:root {
+  --color-primary: #ff6fb5; /* Girly pink shade */
+  --color-secondary: #ff99cc; /* Complementary pink */
+  --color-bg: #fef7fa; /* Light pink background */
+  --color-overlay: rgba(255, 240, 245, 0.8); /* Transparent pinkish overlay */
+  --color-border: #e1b7c4; /* Subtle border color */
+  --color-text: #333; /* Dark gray text */
+  --color-muted: #666; /* Muted text for placeholders */
+  --color-hover: #ff3399; /* Button hover color */
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* Body styles for signup and login */
 body.signup-login {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background: url('src/assets/signuplogin.jpg') no-repeat center center fixed; /* Replace this URL with your image */
+  font-family: var(--font-main);
+  background: url('src/assets/signuplogin.jpg') no-repeat center center fixed;
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -10,10 +23,10 @@ body.signup-login {
   align-items: center;
   height: 100vh;
   width: 100%;
-  color: #333;
+  color: var(--color-text);
 }
 
-/* Transparent overlay to make the text readable */
+/* Transparent overlay for better readability */
 body.signup-login::before {
   content: '';
   position: absolute;
@@ -21,21 +34,24 @@ body.signup-login::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(210, 177, 177, 0.6); /* Semi-transparent white overlay */
+  background: var(--color-overlay);
   z-index: -1;
 }
 
+/* Centered container */
 .container {
   display: flex;
   justify-content: center;
-  background: url('src/assets/signuplogin.jpg');
   align-items: center;
-  width: 10%;
+  width: 100%;
   max-width: 1200px;
   padding: 20px;
+  z-index: 1;
 }
+
+/* Login and Signup forms */
 .login-form, .signup-form {
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  background-color: rgba(255, 255, 255, 0.9); /* Soft white background */
   padding: 2rem 3rem;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -45,51 +61,56 @@ body.signup-login::before {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for forms */
+/* Hover effect */
 .login-form:hover, .signup-form:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Headings */
 h1 {
   font-size: 2.4rem;
-  color: #ff66b2;
+  color: var(--color-primary);
   margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
   letter-spacing: 1.5px;
   font-weight: 600;
 }
 
 p {
   font-size: 1rem;
-  color: #666;
+  color: var(--color-muted);
   margin-top: 1rem;
   font-weight: 500;
 }
 
-/* Styling inputs */
+/* Input fields */
 input {
   width: 100%;
   padding: 1rem;
   margin: 0.8rem 0;
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   font-size: 1rem;
-  background-color: #f9f9f9;
+  background-color: #fefefe;
   transition: border 0.3s ease;
   box-sizing: border-box;
 }
 
 input:focus {
-  border-color: #ff66b2;
+  border-color: var(--color-primary);
   outline: none;
 }
 
-/* Button styles */
+input::placeholder {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Buttons */
 button {
   padding: 1rem;
   width: 100%;
-  background: linear-gradient(135deg, #ff66b2, #ff99cc);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: white;
   font-size: 1.1rem;
   border-radius: 8px;
@@ -100,7 +121,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff3399;
+  background-color: var(--color-hover);
   transform: translateY(-2px);
 }
 
@@ -109,9 +130,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
+/* Links */
 a {
   text-decoration: none;
-  color: #ff66b2;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -119,11 +141,7 @@ a:hover {
   text-decoration: underline;
 }
 
-input::placeholder {
-  color: #c8c8c8;
-  font-style: italic;
-}
-
+/* Responsive styles */
 @media (max-width: 768px) {
   .login-form, .signup-form {
     padding: 1.5rem 2rem;

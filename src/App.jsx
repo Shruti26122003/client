@@ -11,6 +11,8 @@ import Message from "./components/Message";
 import DoctorAppointment from "./components/DoctorAppointment";
 import PeriodPredictor from "./components/periodPredictor";
 import Article from "./components/Article";
+import './App.css';
+
 const App = () => {
   const location = useLocation(); // Get the current path dynamically
 

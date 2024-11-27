@@ -1,207 +1,133 @@
-
-
-/* Home Page Styling */
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url('src/assets/home-background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  min-height: 100vh;
-  text-align: center;
-  padding: 20px;
+/* Global Styles */
+:root {
+  --color-primary: #ff6fb5; /* Girly pink shade */
+  --text-color: #333; /* Dark gray for text */
+  --color-bg: #fef7fa; /* Light pinkish background */
+  --color-card: white;
+  --color-soft: #666; /* Softer gray for secondary text */
+  --color-border: #e4d9e2; /* Light border */
 }
 
-.home-container h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-.home-container p {
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin-top: 0;
-  line-height: 1.8;
-  max-width: 850px;
-  margin-bottom: 30px;
-  opacity: 0.9;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.home-container button {
-  padding: 15px 40px;
-  background-color: #ff3366;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: 600;
-  box-shadow: 0 8px 15px rgba(255, 51, 102, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.home-container button:hover {
-  background-color: #ff99cc;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 20px rgba(255, 51, 102, 0.5);
-}
-
-.home-container button:active {
-  transform: translateY(1px);
-  box-shadow: 0 5px 10px rgba(255, 51, 102, 0.2);
-}
-
-/* Key Features Section */
-.features, .about {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #333;
-  padding: 60px 30px;
-  margin-top: 40px;
-  border-radius: 15px;
-  max-width: 1200px;
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  animation: slideIn 1.5s ease-in-out;
-}
-
-.features h2, .about h2 {
-  font-size: 2.8rem;
-  margin-bottom: 30px;
-  font-weight: 700;
-  color: #ff3366;
-}
-
-.features-list {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.feature {
-  max-width: 300px;
-  text-align: left;
-}
-
-.feature h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-  color: #ff3366;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.feature h3:hover {
-  color: #ff99cc;
-  transform: translateY(-3px);
-}
-
-.feature p {
-  font-size: 1.2rem;
-  color: #555;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-bg);
+  color: var(--text-color);
   line-height: 1.6;
+}
+
+/* Home Container */
+.home-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--color-soft);
+  margin: 1rem 0 2rem;
 }
 
 /* Call-to-Action Button */
 .cta-container {
-  margin-top: 40px;
+  margin: 2rem 0;
 }
 
 .cta-button {
-  padding: 18px 35px;
-  background-color: #ff3366;
+  background: var(--color-primary);
   color: white;
-  font-size: 1.3rem;
   border: none;
-  border-radius: 30px;
-  cursor: pointer;
+  padding: 0.6rem 1.4rem; /* Compact padding */
+  font-size: 0.9rem;
   font-weight: 600;
-  box-shadow: 0 8px 15px rgba(255, 51, 102, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 25px; /* Smooth rounded edges */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .cta-button:hover {
-  background-color: #ff99cc;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 20px rgba(255, 51, 102, 0.5);
+  background: #e65f9f; /* Slightly darker pink on hover */
+  transform: scale(1.05); /* Subtle hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:active {
-  transform: translateY(1px);
-  box-shadow: 0 5px 10px rgba(255, 51, 102, 0.2);
+  transform: scale(0.98); /* Slight "pressed" effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .home-container h1 {
-    font-size: 2.8rem;
-  }
-
-  .home-container p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    padding: 14px 28px;
-    font-size: 1rem;
-  }
-
-  .features h2, .about h2 {
-    font-size: 2.2rem;
-  }
-
-  .feature h3 {
-    font-size: 1.5rem;
-  }
+/* Features Section */
+.features {
+  margin: 3rem 0;
 }
 
-@media (max-width: 480px) {
-  .home-container h1 {
-    font-size: 2.3rem;
-  }
-
-  .home-container p {
-    font-size: 0.9rem;
-  }
-
-  .cta-button {
-    padding: 12px 20px;
-    font-size: 0.9rem;
-  }
-
-  .feature h3 {
-    font-size: 1.3rem;
-  }
+.features h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.features-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.feature {
+  flex: 1 1 calc(33% - 1rem); /* Responsive layout */
+  background: var(--color-card);
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: var(--color-soft);
+}
+
+/* About Section */
+.about {
+  margin: 3rem 0;
+  text-align: left;
+  background: var(--color-card);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1rem;
+  color: var(--color-soft);
+  margin-bottom: 1rem;
 }

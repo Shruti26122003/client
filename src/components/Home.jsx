@@ -1,21 +1,21 @@
-import { useNavigate } from 'react-router-dom'; 
-import "/src/styles/Home.css";
+import { useNavigate } from 'react-router-dom';
+import '/src/styles/Home.css';
 
 const Home = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
-  
   const navigateToDashboard = () => navigate('/dashboard');
   const navigateToDoctorAppointment = () => navigate('/doctorappointment');
   const navigateToArticlePage = () => navigate('/articles');
 
   return (
     <div className="home-container">
-      <h1>Your Period Tracker</h1>
-      <p>
-        Empowering women with insights, tools, and tips to track and manage
-        menstrual health.
-      </p>
+      <header>
+        <h1>Period Tracker</h1>
+        <p>
+          Empowering women with insights, tools, and tips to manage menstrual health effectively.
+        </p>
+      </header>
 
       <div className="cta-container">
         <button className="cta-button" onClick={navigateToDashboard}>
@@ -26,23 +26,17 @@ const Home = () => {
       <section className="features">
         <h2>Key Features</h2>
         <div className="features-list">
-          <div className="feature">
-            <h3 onClick={navigateToDashboard} className="clickable-heading">
-              Cycle Tracking
-            </h3>
+          <div className="feature" onClick={navigateToDashboard}>
+            <h3 className="clickable-heading">Cycle Tracking</h3>
             <p>Track your menstrual cycle, symptoms, and health insights.</p>
           </div>
-          <div className="feature">
-            <h3 onClick={navigateToArticlePage} className="clickable-heading">
-              Expert Insights
-            </h3>
-            <p>Get expert tips on managing your health and wellness.</p>
+          <div className="feature" onClick={navigateToArticlePage}>
+            <h3 className="clickable-heading">Expert Insights</h3>
+            <p>Access tips on managing your health and wellness.</p>
           </div>
-          <div className="feature">
-            <h3 onClick={navigateToDoctorAppointment} className="clickable-heading">
-              Doctor Appointments
-            </h3>
-            <p>Schedule doctor appointments and manage your health consultations.</p>
+          <div className="feature" onClick={navigateToDoctorAppointment}>
+            <h3 className="clickable-heading">Doctor Appointments</h3>
+            <p>Schedule and manage your health consultations.</p>
           </div>
         </div>
       </section>
@@ -50,14 +44,8 @@ const Home = () => {
       <section className="about">
         <h2>Why Period Tracker?</h2>
         <p>
-          Our Period Tracker app helps you stay informed and in control of your
-          menstrual health. By providing personalized insights, we empower you
-          to make healthier choices and understand your body better.
-        </p>
-        <p>
-          Whether you are looking to track your cycle for health reasons or just
-          want to better understand your body, our app offers tools that support
-          your journey.
+          Our app offers tools to track your cycle, manage health, and gain personalized insights,
+          empowering you to make informed decisions.
         </p>
       </section>
     </div>

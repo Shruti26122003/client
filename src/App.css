@@ -1,16 +1,118 @@
-/* App.css */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensures full viewport height */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
 }
 
-.content-wrapper {
-  flex: 1; /* This ensures that the content fills available space */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
+:root {
+    --color-primary: #e75480; /* A soft pink shade */
+    --text-color: #4a4a4a; /* Neutral dark grey */
+    --color-bg: #fff4f9; /* Light pinkish background */
+    --color-card: white; /* Pure white for cards */
+    --color-soft: #8a8a8a; /* Softer grey for subtle text */
+    --color-border: #ffd1dc; /* Light pink border */
+    --color-red: #ff6b6b; /* Coral red for danger actions */
+}
+.darkmode {
+    --text-color: #ffffff;
+    --color-bg: #2d2d2d;
+    --color-card: #383838;
+    --color-border: #444;
 }
 
+body{
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 991px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user img {
+    width: 33px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.user h4 {
+    color: var(--color-primary);
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-soft);
+}
+
+small, p {
+    color: var(--color-soft);
+}
+
+.btn {
+    padding: 0.6rem 1.6rem; /* Fixed padding */
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5rem;
+    font-size: 0.9rem; /* Adjusted font size */
+    font-weight: 500;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn-red {
+    background: var(--color-red);
+    color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 20% 54% 23%; /* This looks fine but you can adjust the width percentage as per your design */
+    gap: 3%;
+    width: 100%;
+}
+
+
+nav {
+    height: 3.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-primary);
+    position: sticky;
+    z-index: 10;
+    background: var(--color-card);
+    top: 0;
+}
